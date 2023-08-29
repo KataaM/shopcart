@@ -114,10 +114,7 @@ export default {
   padding-right: 40px;
   padding-left: 40px;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-}
+
 .navbar-wrapper {
   vertical-align: middle;
   display: flex;
@@ -129,17 +126,15 @@ a {
 .navbar {
   /* background-color: darkolivegreen; */
 
-  font:
-    16px 'Inter',
-    sans-serif;
-  font-weight: 500;
+  /* font-size: 16px; */
+  /* font-weight: 500; */
   line-height: 20px;
   color: #231f1e;
 
   margin: 0;
   padding: 15px;
   overflow: hidden;
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   width: 100%;

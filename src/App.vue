@@ -1,16 +1,16 @@
 <script setup>
+import HeroBanner from './components/HeroBanner.vue'
 import Navbar from './components/navbar/Navbar.vue'
 </script>
 
 <template>
-  <header>
-    <Navbar />
-    <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <Navbar />
+  <HeroBanner />
+  <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div> -->
-  </header>
 
   <!-- <main> 
     <TheWelcome />
