@@ -10,7 +10,7 @@ export default {
 
 <template>
   <div class="navbar">
-    <div class="navbar-container">
+    <div class="container">
       <div class="navbar-wrapper">
         <a href="#" class="navbar-brand"
           ><img alt="Vue logo" class="logo" src="../../assets/shopcart_logo.svg"
@@ -106,15 +106,6 @@ export default {
 
   justify-content: space-evenly;
 }
-.navbar-container {
-  width: 100%;
-  max-width: 1360px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 40px;
-  padding-left: 40px;
-}
-
 .navbar-wrapper {
   vertical-align: middle;
   display: flex;
@@ -137,7 +128,7 @@ export default {
   /* position: fixed; */
   top: 0;
   left: 0;
-  width: 100%;
+  /* width: 100%; */
   height: 52px;
 }
 li {
