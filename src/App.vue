@@ -2,6 +2,7 @@
 import CategoryCard from './components/CategoryCard.vue'
 import HeroBanner from './components/HeroBanner.vue'
 import Navbar from './components/navbar/Navbar.vue'
+import BestDealCard from './components/BestDealCard.vue'
 </script>
 
 <script>
@@ -35,6 +36,26 @@ export default {
           categoryTitle: 'Travel',
           categoryImgPath: 'cat_travel.png'
         }
+      ],
+      bestDeals: [
+        {
+          productId: 1,
+          productImgPath: 'bestdeal-1.png',
+          productName: 'HomePod mini',
+          productDescription: 'Table with air purifier, stained veneer/black',
+          productReviewAverage: 4.5,
+          productTotalReviews: 121,
+          productPrice: 239
+        },
+        {
+          productId: 2,
+          productImgPath: 'bestdeal-1.png',
+          productName: 'HomePod mini',
+          productDescription: 'Table with air purifier, stained veneer/black',
+          productReviewAverage: 4.5,
+          productTotalReviews: 121,
+          productPrice: 239
+        }
       ]
     }
   }
@@ -60,20 +81,35 @@ export default {
       </div>
     </div>
   </section>
-  <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div> -->
-
-  <!-- <main> 
-    <TheWelcome />
-  </main>  -->
+  <section class="best-deal-area">
+    <div class="container">
+      <div class="best-deal-title-wrap">
+        <h3 class="categories-title">Todays best deals for you!</h3>
+      </div>
+      <div class="best-deal-wrap">
+        <div class="best-deal-slider">
+          <BestDealCard
+            v-for="(item, index) in bestDeals"
+            :item="item"
+            :index="index"
+            :key="item.productId"
+            :productImgPath="item.productImgPath"
+            :productName="item.productName"
+            :productDescription="item.productDescription"
+            :productReviewAverage="item.productReviewAverage"
+            :productTotalReviews="item.productTotalReviews"
+            :productPrice="item.productPrice"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style scoped>
-.container {
-  max-width: 1280px;
+.best-deal-slider {
+  display: flex;
 }
 .shop-category-wrap {
   display: grid;
@@ -96,30 +132,4 @@ export default {
   font-weight: 700;
   text-transform: capitalize;
 }
-/* header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-} */
 </style>
